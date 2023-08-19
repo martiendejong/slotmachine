@@ -1,0 +1,15 @@
+<h2>{{slotmachine.name}}</h2>
+<div>
+    <div *ngFor="let item of [].constructor(slotmachine.rolls); let i = index"
+        class="slot-roll">
+        <div *ngFor="let option of slotmachine.options" 
+            class="slot-option"
+            style="background-image: url(/assets/{{option.imageUrl}})">
+        </div>
+        <div class="slot-option"
+            style="background-image: url(/assets/{{slotmachine.options[0].imageUrl}})">
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+<a href="#" (click)="roll()">Draaien</a>
